@@ -71,6 +71,17 @@ Main application resides in `minimalpy` folder, documentation in `docs` and unit
 └── tox.ini
 ```
 
+### Build and Deployment
+
+#### Deploying with S2I (Source to Image)
+
+Install s2i from: https://github.com/openshift/source-to-image
+
+```
+s2i build . centos/python-36-centos7 minimalpy
+docker run -p 5430:5430 -e APP_FILE=minimalpy/server.py minimalpy
+```
+
 ### Similar Projects
 
 Some projects similar in scope:

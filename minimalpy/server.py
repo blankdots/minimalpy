@@ -1,4 +1,3 @@
-import asyncio
 from aiohttp import web
 import logging
 
@@ -19,9 +18,7 @@ async def healthcheck(request):
 
 def init():
     """Initialise server."""
-    loop = asyncio.get_event_loop()
-
-    server = web.Application(loop=loop)
+    server = web.Application()
     server.router.add_routes(routes)
     return server
 

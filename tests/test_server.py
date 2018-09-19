@@ -38,14 +38,12 @@ class TestBasicFunctionsApp(unittest.TestCase):
         pass
 
     @mock.patch('minimalpy.server.web')
-    @mock.patch('minimalpy.server.asyncio')
-    def test_main(self, mock_async, mock_webapp):
+    def test_main(self, mock_webapp):
         """Should start the webapp."""
         main()
         mock_webapp.run_app.assert_called()
 
-    @mock.patch('minimalpy.server.asyncio')
-    def test_init(self, mock_async):
+    def test_init(self):
         """Test init type."""
         server = init()
         self.assertIs(type(server), web.Application)
