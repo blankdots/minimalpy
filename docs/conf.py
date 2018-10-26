@@ -4,8 +4,6 @@
 import os
 import sys
 import datetime
-from unittest.mock import MagicMock
-
 import minimalpy
 
 # Get the project root dir, which is the parent dir of this
@@ -13,19 +11,8 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- General configuration ------------------------------------------------
 
-
-class Mock(MagicMock):
-    """Mock some of the packages."""
-
-    @classmethod
-    def __getattr__(cls, name):
-        """Get attributes."""
-        return MagicMock()
-
-
 # List modules need to be mocked
-MOCK_MODULES = ['aiohttp']
-sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
+autodoc_mock_imports = ['aiohttp']
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
