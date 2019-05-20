@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 from minimalpy import __version__, __author__, __title__
 from os import path
 
@@ -80,6 +80,7 @@ setup(
 
     extras_require={  # Optional
         'test': ['coverage', 'pytest', 'pytest-cov', 'coveralls', 'tox'],
+        'docs': ['sphinx', 'sphinx_rtd_theme']
     },
 
     package_data={'': ['data/*.json']},  # Optional

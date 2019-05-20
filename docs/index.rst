@@ -69,6 +69,7 @@ Main application resides in `minimalpy` folder, documentation in `docs` and unit
     │   ├── conf.py
     │   ├── index.rst
     │   └── Makefile
+    ├── bandit.yml
     ├── LICENSE
     ├── README.md
     ├── readthedocs.yml
