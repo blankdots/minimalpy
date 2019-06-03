@@ -13,6 +13,7 @@ At the same time the project exemplifies:
   * [flake8](http://flake8.pycqa.org/en/latest/) style enforcement;
   * running unit tests and coverage;
 * [travis](https://travis-ci.org/blankdots/minimalpy.svg?branch=master) and [coveralls](https://coveralls.io/github/blankdots/minimalpy) integration;
+* [bandit](https://bandit.readthedocs.io) to check common security issues in Python code;
 * building documentation for [readthedocs](https://minimalpy.readthedocs.io).
 
 ### Install and Run
