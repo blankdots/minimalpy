@@ -84,6 +84,11 @@ s2i build . centos/python-36-centos7 minimalpy
 docker run -p 5430:5430 -e APP_FILE=minimalpy/server.py minimalpy
 ```
 
+### License
+
+`minimal` python and all it sources are released under `Apache License 2.0`.
+
+
 ### Similar Projects
 
 Some projects similar in scope:
