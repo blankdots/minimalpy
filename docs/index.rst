@@ -84,6 +84,11 @@ Main application resides in `minimalpy` folder, documentation in `docs` and unit
     └── tox.ini
 
 
+License
+-------
+
+``minimal`` python and all it sources are released under ``Apache License 2.0``.
+
 Similar Projects
 ----------------
 
