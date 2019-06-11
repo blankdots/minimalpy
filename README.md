@@ -68,7 +68,6 @@ Main application resides in `minimalpy` folder, documentation in `docs` and unit
 │   ├── conftest.py
 │   ├── coveralls.py
 │   ├── __init__.py
-│   ├── requirements.txt
 │   └── test_server.py
 └── tox.ini
 ```
