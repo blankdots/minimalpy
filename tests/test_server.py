@@ -13,7 +13,7 @@ class AppTestCase(AioHTTPTestCase):
 
     async def get_application(self):
         """Retrieve web Application for test."""
-        return init()
+        return await init()
 
     @unittest_run_loop
     async def test_health(self):
@@ -43,9 +43,9 @@ class TestBasicFunctionsApp(unittest.TestCase):
         main()
         mock_webapp.run_app.assert_called()
 
-    def test_init(self):
+    async def test_init(self):
         """Test init type."""
-        server = init()
+        server = await init()
         self.assertIs(type(server), web.Application)
 
 

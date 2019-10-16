@@ -16,7 +16,7 @@ async def healthcheck(request):
     return web.Response(body='OK')
 
 
-def init():
+async def init():
     """Initialise server."""
     server = web.Application()
     server.router.add_routes(routes)
