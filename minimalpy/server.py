@@ -25,7 +25,7 @@ async def init():
 
 def main():
     """Do the server."""
-    host = '0.0.0.0'
+    host = '0.0.0.0'  # nosec
     port = 5430
 
     LOG.info(f"Started server on {host}:{port}")
