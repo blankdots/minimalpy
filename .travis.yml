@@ -10,6 +10,8 @@ install: pip install tox
 stages:
   - name: tests
     if: type IN (push, pull_request)
+  - name: integtests
+    if: type IN (pull_request)
 
 jobs:
   include:
@@ -43,6 +45,20 @@ jobs:
       before_script:
         - pip install tox-travis
       script: tox -e bandit
+    - stage: integtests
+      name: "Integration Tests"
+      before_script:
+        - wget https://github.com/openshift/source-to-image/releases/download/v1.1.12/source-to-image-v1.1.12-2a783420-linux-amd64.tar.gz
+        - tar -xvf source-to-image-v1.1.12-2a783420-linux-amd64.tar.gz
+        - sudo cp s2i /usr/local/bin
+        - s2i build . centos/python-36-centos7 blankdots/minimalpy
+        - cd deploy/test
+        - docker-compose up -d
+        - sleep 10
+        - docker ps
+        - pip install aiohttp
+      script:
+        - python run_test.py
 
 notifications:
   email: false
