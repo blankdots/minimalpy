@@ -1,5 +1,7 @@
 from aiohttp import web
 import logging
+import asyncio
+import uvloop
 
 FORMAT = '[%(asctime)s][%(name)s][%(process)d %(processName)s][%(levelname)-8s] (L:%(lineno)s) %(funcName)s: %(message)s'
 logging.basicConfig(format=FORMAT, datefmt='%Y-%m-%d %H:%M:%S')
@@ -7,6 +9,7 @@ LOG = logging.getLogger(__name__)
 LOG.setLevel(logging.INFO)
 
 routes = web.RouteTableDef()
+asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
 
 @routes.get('/health')
