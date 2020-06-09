@@ -13,13 +13,13 @@ asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
 
 @routes.get('/health')
-async def healthcheck(request):
+async def healthcheck(request: web.Request) -> web.Response:
     """Test health, will always return ok."""
     LOG.debug('Healthcheck called')
     return web.Response(body='OK')
 
 
-async def init():
+async def init() -> web.Application:
     """Initialise server."""
     server = web.Application()
     server.router.add_routes(routes)

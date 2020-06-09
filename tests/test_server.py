@@ -1,3 +1,4 @@
+from typing import Awaitable
 import unittest
 from aiohttp.test_utils import AioHTTPTestCase, unittest_run_loop
 from aiohttp import web
@@ -11,12 +12,12 @@ class AppTestCase(AioHTTPTestCase):
     Testing web app endpoints.
     """
 
-    async def get_application(self):
+    async def get_application(self) -> Awaitable:
         """Retrieve web Application for test."""
         return await init()
 
     @unittest_run_loop
-    async def test_health(self):
+    async def test_health(self) -> None:
         """Simplest test the health endpoint."""
         resp = await self.client.request("GET", "/health")
         assert 200 == resp.status
@@ -29,21 +30,21 @@ class TestBasicFunctionsApp(unittest.TestCase):
     Testing basic functions from web app.
     """
 
-    def setUp(self):
+    def setUp(self) -> None:
         """Initialise fixtures."""
         pass
 
-    def tearDown(self):
+    def tearDown(self) -> None:
         """Remove setup variables."""
         pass
 
     @mock.patch('minimalpy.server.web')
-    def test_main(self, mock_webapp):
+    def test_main(self, mock_webapp) -> None:
         """Should start the webapp."""
         main()
         mock_webapp.run_app.assert_called()
 
-    async def test_init(self):
+    async def test_init(self) -> None:
         """Test init type."""
         server = await init()
         self.assertIs(type(server), web.Application)
