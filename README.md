@@ -1,7 +1,10 @@
 ## Minimal Python Project
 
-[![Build Status](https://travis-ci.org/blankdots/minimalpy.svg?branch=master)](https://travis-ci.org/blankdots/minimalpy)
-[![Coverage Status](https://coveralls.io/repos/github/blankdots/minimalpy/badge.svg?branch=master)](https://coveralls.io/github/blankdots/minimalpy?branch=master)
+![Integration Tests](https://github.com/blankdots/minimalpy/workflows/Integration%20Tests/badge.svg)
+![Python Unit Tests](https://github.com/blankdots/minimalpy/workflows/Python%20Unit%20Tests/badge.svg)
+![Python style check](https://github.com/blankdots/minimalpy/workflows/Python%20style%20check/badge.svg)
+![Documentation Checks](https://github.com/blankdots/minimalpy/workflows/Documentation%20Checks/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/blankdots/minimalpy/badge.svg?branch=HEAD)](https://coveralls.io/github/blankdots/minimalpy?branch=HEAD)
 [![Documentation Status](https://readthedocs.org/projects/minimalpy/badge/?version=latest)](https://minimalpy.readthedocs.io/en/latest/?badge=latest)
 
 An example of a minimal Python 3.6+ project that contains an web application built with [aiohttp](http://aiohttp.readthedocs.io/).
