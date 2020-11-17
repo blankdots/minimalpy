@@ -21,7 +21,7 @@ class AppTestCase(AioHTTPTestCase):
         """Simplest test the health endpoint."""
         resp = await self.client.request("GET", "/health")
         assert 200 == resp.status
-        assert 'OK' == await resp.text()
+        assert "OK" == await resp.text()
 
 
 class TestBasicFunctionsApp(unittest.TestCase):
@@ -38,7 +38,7 @@ class TestBasicFunctionsApp(unittest.TestCase):
         """Remove setup variables."""
         pass
 
-    @mock.patch('minimalpy.server.web')
+    @mock.patch("minimalpy.server.web")
     def test_main(self, mock_webapp) -> None:
         """Should start the webapp."""
         main()
@@ -50,5 +50,5 @@ class TestBasicFunctionsApp(unittest.TestCase):
         self.assertIs(type(server), web.Application)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
