@@ -3,7 +3,7 @@ version: '3.2'
 services:
   minimal:
     hostname: minimalpy
-    image: blankdots/minimalpy
+    image: localhost:5000/minimalpy
     ports:
       - 5430:5430
     restart: on-failure
