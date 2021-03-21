@@ -7,7 +7,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/blankdots/minimalpy/badge.svg?branch=HEAD)](https://coveralls.io/github/blankdots/minimalpy?branch=HEAD)
 [![Documentation Status](https://readthedocs.org/projects/minimalpy/badge/?version=latest)](https://minimalpy.readthedocs.io/en/latest/?badge=latest)
 
-An example of a minimal Python 3.7+ project that contains an web application built with [aiohttp](http://aiohttp.readthedocs.io/).
+An example of a minimal Python 3.8+ project that contains an web application built with [aiohttp](http://aiohttp.readthedocs.io/).
 At the same time the project exemplifies:
 * aiohttp server;
 * logging formatting;
@@ -77,13 +77,10 @@ Main application resides in `minimalpy` folder, documentation in `docs` and unit
 
 ### Build and Deployment
 
-#### Deploying with S2I (Source to Image)
-
-Install s2i from: https://github.com/openshift/source-to-image
-
+build and run using `docker`:
 ```
-s2i build . centos/python-36-centos7 minimalpy
-docker run -p 5430:5430 -e APP_FILE=minimalpy/server.py minimalpy
+docker build -t minimalpy .
+docker run -p 5430:5430 minimalpy
 ```
 
 ### License
