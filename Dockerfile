@@ -1,4 +1,4 @@
-FROM python:3.8-alpine3.13 as BUILD
+FROM python:3.9.2-alpine3.13 as BUILD
 
 RUN apk add --update \
     && apk add --no-cache build-base curl-dev linux-headers bash git musl-dev\
@@ -13,7 +13,7 @@ RUN pip install --upgrade pip && \
     pip install -r /root/minimal/requirements.txt && \
     pip install /root/minimal
 
-FROM python:3.8-alpine3.13
+FROM python:3.9.2-alpine3.13
 
 RUN apk add --no-cache --update bash
 
