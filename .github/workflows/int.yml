@@ -57,7 +57,7 @@ jobs:
 
     - name: Collect logs from docker
       if: ${{ failure() }}
-      run: cd deploy && docker-compose -f deploy/test/docker-compose.yml logs --no-color -t > ../tests/dockerlogs || true
+      run: cd deploy && docker compose -f deploy/test/docker-compose.yml logs --no-color -t > ../tests/dockerlogs || true
 
     - name: Persist log files
       if: ${{ failure() }}
