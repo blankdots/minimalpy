@@ -1,4 +1,4 @@
-FROM python:3.11-alpine as BUILD
+FROM python:3.11-alpine AS build
 
 RUN apk add --update \
     && apk add --no-cache build-base curl-dev linux-headers bash git musl-dev\
@@ -17,15 +17,15 @@ FROM python:3.11-alpine
 
 RUN apk add --no-cache --update bash
 
-LABEL maintainer "blankdots"
+LABEL maintainer="blankdots"
 LABEL org.label-schema.schema-version="1.0"
 LABEL org.label-schema.vcs-url="https://github.com/blankdots/minimalpy"
 
-COPY --from=BUILD usr/local/lib/python3.11/ usr/local/lib/python3.11/
+COPY --from=build usr/local/lib/python3.11/ usr/local/lib/python3.11/
 
-COPY --from=BUILD /usr/local/bin/gunicorn /usr/local/bin/
+COPY --from=build /usr/local/bin/gunicorn /usr/local/bin/
 
-COPY --from=BUILD /usr/local/bin/minimal /usr/local/bin/
+COPY --from=build /usr/local/bin/minimal /usr/local/bin/
 
 RUN mkdir -p /app
 
