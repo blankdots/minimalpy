@@ -1,3 +1,3 @@
-aiohttp==3.11.12
+aiohttp==3.11.13
 uvloop==0.21.0
 gunicorn==23.0.0
