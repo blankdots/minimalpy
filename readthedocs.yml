@@ -11,9 +11,9 @@ formats:
 
 # Set the version of Python
 build:
-  os: ubuntu-22.04  # <- add this line
+  os: ubuntu-24.04  # <- add this line
   tools:
-    python: "3.11"
+    python: "3.13"
 
 # Optionally set the version of Python and requirements required to build your docs
 python:
