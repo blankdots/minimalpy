@@ -32,7 +32,7 @@ jobs:
         with:
           images: blankdots/minimalpy
           tags: |
-            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
             type=ref,event=tag
       
       - name: Build and push
