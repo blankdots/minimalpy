@@ -7,7 +7,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/blankdots/minimalpy/badge.svg?branch=HEAD)](https://coveralls.io/github/blankdots/minimalpy?branch=HEAD)
 [![Documentation Status](https://readthedocs.org/projects/minimalpy/badge/?version=latest)](https://minimalpy.readthedocs.io/en/latest/?badge=latest)
 
-An example of a minimal Python 3.11+ project that contains an web application built with [aiohttp](http://aiohttp.readthedocs.io/).
+An example of a minimal Python 3.13+ project that contains an web application built with [aiohttp](http://aiohttp.readthedocs.io/).
 At the same time the project exemplifies:
 * aiohttp server;
 * logging formatting;
