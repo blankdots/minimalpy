@@ -26,7 +26,7 @@ classifiers = [
     "Topic :: Software Development :: Build Tools",
 ]
 dependencies = [
-    "aiohttp==3.12.14",
+    "aiohttp==3.12.15",
     "gunicorn==23.0.0",
     "uvloop==0.21.0",
 ]
