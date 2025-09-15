@@ -39,7 +39,7 @@ docs = [
 test = [
     "coverage==7.10.6",
     "coveralls",
-    "pytest-cov==6.3.0",
+    "pytest-cov==7.0.0",
     "pytest-xdist==3.8.0",
     "pytest==8.4.2",
     "tox==4.30.2",
