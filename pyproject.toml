@@ -37,7 +37,7 @@ docs = [
     "sphinx_rtd_theme",
 ]
 test = [
-    "coverage==7.10.6",
+    "coverage==7.10.7",
     "coveralls",
     "pytest-cov==7.0.0",
     "pytest-xdist==3.8.0",
