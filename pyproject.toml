@@ -26,7 +26,7 @@ classifiers = [
     "Topic :: Software Development :: Build Tools",
 ]
 dependencies = [
-    "aiohttp==3.13.2",
+    "aiohttp==3.13.3",
     "gunicorn==23.0.0",
     "uvloop==0.22.1",
 ]
@@ -37,12 +37,12 @@ docs = [
     "sphinx_rtd_theme",
 ]
 test = [
-    "coverage==7.11.0",
+    "coverage==7.13.1",
     "coveralls",
     "pytest-cov==7.0.0",
     "pytest-xdist==3.8.0",
-    "pytest==8.4.2",
-    "tox==4.32.0",
+    "pytest==9.0.2",
+    "tox==4.33.0",
 ]
 
 [project.scripts]
