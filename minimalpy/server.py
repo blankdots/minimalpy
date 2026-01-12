@@ -9,7 +9,6 @@ LOG = logging.getLogger(__name__)
 LOG.setLevel(logging.INFO)
 
 routes = web.RouteTableDef()
-asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
 
 @routes.get("/health")
@@ -28,6 +27,7 @@ async def init() -> web.Application:
 
 def main() -> None:
     """Do the server."""
+    asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
     host = "0.0.0.0"  # nosec
     port = 5430
 
