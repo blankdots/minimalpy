@@ -28,7 +28,7 @@ classifiers = [
 dependencies = [
     "aiohttp==3.13.3",
     "gunicorn==25.0.0",
-    "uvloop==0.21.0",
+    "uvloop==0.22.1",
 ]
 
 [project.optional-dependencies]
