@@ -42,7 +42,7 @@ test = [
     "pytest-cov==7.1.0",
     "pytest-xdist==3.8.0",
     "pytest==9.0.3",
-    "tox==4.52.1",
+    "tox==4.53.0",
 ]
 
 [project.scripts]
