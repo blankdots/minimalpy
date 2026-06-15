@@ -41,7 +41,7 @@ test = [
     "coveralls",
     "pytest-cov==7.1.0",
     "pytest-xdist==3.8.0",
-    "pytest==9.0.3",
+    "pytest==9.1.0",
     "tox==4.55.1",
 ]
 
